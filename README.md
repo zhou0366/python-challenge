@@ -7,7 +7,7 @@ PyBank
 
     A for loop is used with csvreader to iterate through each row of the document. The value read from the document will be cast as a float. The loop grabs the current value of the row from the second column and will add that to the net profit. The counter for the number of months evaluated is then incremented. An if statement will be used to determine whether the change for the month is positive or negative. If the current value is positive and above the current greatest value, the value for the greatest profit and the current will be written over the current values. After the for loop is complete, the average change value will be calculated by taking the net profit of the document and divide by the number of months.
 
-    Finally, the output text file will be output with the desired output values.
+    Finally, the output text file will be output with the desired output values. Using "print", we will use the same strings built as writing to the text file to print to the terminal.
     
     The results are
         Financial Analysis
@@ -32,7 +32,7 @@ PyPoll
 
     A for loop is used with csvreader to iterate through each row of the document. The total votes count will increment each time the loop runs. Then, the loop checks if the current canidate name in column 3 is in the canidates list or not. If not, it will add the canidate's name into the list and the canidate votes dictionary. Their vote count will be initialized at 0. Then, the vote count for the canidate in the dictionary will be incremented.
 
-    Finally, the output text file will be output with the desired output values. A variable to count the highest vote count will be created for comparison in an if statement while outputting canidate results. While printing the results, we will calculate the percentage of votes for each canidate by dividing their votes by the number of total votes. Then, their count of votes will be compared against the current highest count. If it is higher, their name will be updated to the variable holding the winner name and the highest vote count variable will be updated.
+    Finally, the output text file will be output with the desired output values. A variable to count the highest vote count will be created for comparison in an if statement while outputting canidate results. While printing the results, we will calculate the percentage of votes for each canidate by dividing their votes by the number of total votes. Then, their count of votes will be compared against the current highest count. If it is higher, their name will be updated to the variable holding the winner name and the highest vote count variable will be updated. Using "print", we will use the same strings built as writing to the text file to print to the terminal.
 
     The results are:
         Election Results

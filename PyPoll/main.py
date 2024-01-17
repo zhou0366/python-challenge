@@ -37,7 +37,9 @@ output_path = 'C:/Users/Eric/Downloads/python-challenge/PyPoll/analysis/output.t
 
 with open(output_path, 'w') as f:
     f.write('Election Results\n--------------\n')
+    print('Election Results\n--------------\n')
     f.write('Total Votes: ' + str(vote_total) + '\n--------------\n')
+    print('Total Votes: ' + str(vote_total) + '\n--------------\n')
 
     #2 variables to store winning canidate and the number of their votes
     highvotes = 0
@@ -48,6 +50,7 @@ with open(output_path, 'w') as f:
         votes=canidate_votes[canidate]
         percentage_votes = votes/vote_total*100
         f.write(canidate + ": " + str(percentage_votes) + "% (" + str(votes) + ")\n")
+        print(canidate + ": " + str(percentage_votes) + "% (" + str(votes) + ")\n")
 
         #determine if canidate has highest number of votes
         if votes > highvotes:
@@ -55,3 +58,4 @@ with open(output_path, 'w') as f:
             winner = canidate
 
     f.write('--------------\nWinner: ' + str(winner) + '\n--------------')
+    print('--------------\nWinner: ' + str(winner) + '\n--------------')

@@ -56,8 +56,14 @@ output_path = 'C:/Users/Eric/Downloads/python-challenge/PyBank/analysis/output.t
 
 with open(output_path, 'w') as f:
     f.write('Financial Analysis\n--------------\n')
+    print('Financial Analysis\n--------------\n')
     f.write('Total Months: ' + str(months_total) + '\n')
+    print('Total Months: ' + str(months_total) + '\n')
     f.write('Total: $' + str(net_prof) + '\n')
+    print('Total: $' + str(net_prof) + '\n')
     f.write('Average change: $' + str(avgchange) + '\n')
+    print('Average change: $' + str(avgchange) + '\n')
     f.write('Greatest increase in profits: ' + str(g_p_date) + ' $' + str(g_profit) + '\n')
+    print('Greatest increase in profits: ' + str(g_p_date) + ' $' + str(g_profit) + '\n')
     f.write('Total decrease in profits: ' + str(g_l_date) + ' $' + str(g_loss) + '\n')
+    print('Total decrease in profits: ' + str(g_l_date) + ' $' + str(g_loss) + '\n')
