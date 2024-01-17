@@ -5,11 +5,10 @@ import os
 import csv
 
 #set file path
-csvpath = os.path.join('C:/Users/Eric/Downloads/python-challenge/PyBank/resources/budget_data.csv')
+csvpath = 'C:/Users/Eric/Downloads/python-challenge/PyBank/resources/budget_data.csv'
 
 #open file
 with open(csvpath) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=',')
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
 
@@ -19,13 +18,12 @@ with open(csvpath) as csvfile:
     #running total number of months 
     months_total = int(0)
     #running count of net total amount of "Profit/Losses"
-    net_prof = int(0)
+    net_prof = float(0)
     #greatest profit tracker value
     g_profit = float(0)
     #greatest loss tracker value
     g_loss = float(0)
-    #count number of changes
-    count = int(0)
+
     for row in csvreader:
         #get current profit/loss value
         currentval = float(row[1])
@@ -48,13 +46,13 @@ with open(csvpath) as csvfile:
                 g_loss = currentval
                 g_l_date = row[0]
         
-        count +=1
+
     #calculate average change
     avgchange = net_prof/months_total
 
 #export results
 
-output_path = os.path.join('C:/Users/Eric/Downloads/python-challenge/PyBank/analysis/output.txt')
+output_path = 'C:/Users/Eric/Downloads/python-challenge/PyBank/analysis/output.txt'
 
 with open(output_path, 'w') as f:
     f.write('Financial Analysis\n--------------\n')

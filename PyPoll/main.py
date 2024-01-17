@@ -4,11 +4,10 @@ import os
 import csv
 
 #set file path
-csvpath = os.path.join('C:/Users/Eric/Downloads/python-challenge/PyPoll/resources/election_data.csv')
+csvpath = 'C:/Users/Eric/Downloads/python-challenge/PyPoll/resources/election_data.csv'
 
 #open file
 with open(csvpath) as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=',')
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
 
@@ -34,7 +33,7 @@ with open(csvpath) as csvfile:
         canidate_votes[row[2]] +=1 
 
 #export results
-output_path = os.path.join('C:/Users/Eric/Downloads/python-challenge/PyPoll/analysis/output.txt')
+output_path = 'C:/Users/Eric/Downloads/python-challenge/PyPoll/analysis/output.txt'
 
 with open(output_path, 'w') as f:
     f.write('Election Results\n--------------\n')
